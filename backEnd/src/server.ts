@@ -18,6 +18,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 app.use("/users", router); // get all users
 app.use("/users", router); // Create Users
+app.use("/users", router); // update user
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
