@@ -6,7 +6,8 @@ import axios from "axios";
 
 const connection = axios.create({
   // baseURL: "http://localhost:5000",
-  baseURL: "http://65.0.188.13:5000",
+  // baseURL: "http://65.0.188.13:5000",
+  baseURL: "https://65.0.188.13:5000",
 });
 
 const getUsers = async () => {
