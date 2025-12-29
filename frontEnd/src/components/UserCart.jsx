@@ -33,7 +33,10 @@ function UserCart({ userName, designation, email, cNo, address }) {
           <br />
           Address: {address}
         </p>
-        <button onClick={handleClick}>Delete User</button>
+        <button onClick={handleClick} className="btn btn-danger">
+          Delete User
+        </button>{" "}
+        <button className="btn btn-secondary">Update User</button>
       </div>
     </div>
   );
