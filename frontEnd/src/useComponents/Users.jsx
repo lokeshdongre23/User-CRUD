@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useEffectEvent, useState } from "react";
 import getUsers from "../services/Services";
 import UserCart from "../components/UserCart";
 
@@ -10,18 +10,15 @@ function Users() {
     // console.log(res.Array);
     setUSers(res.data);
   };
-  useEffect(() => {
+  const onSomething = useEffectEvent(() => {
     getData();
+  });
+  useEffect(() => {
+    onSomething();
+    // getData();
   }, []);
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
+    <div>
       {users.length === 0 ? (
         <div
           className="badge text-bg-primary text-wrap"
@@ -49,6 +46,7 @@ function Users() {
           </div>
         ))
       )}
+      <button onClick={onSomething}>Refresh Users</button>
     </div>
   );
 }
