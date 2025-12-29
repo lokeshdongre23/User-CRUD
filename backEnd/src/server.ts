@@ -16,9 +16,10 @@ dbConnection();
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to TypeScript Express Starter!");
 });
-app.use("/users", router); // get all users
-app.use("/users", router); // Create Users
-app.use("/users", router); // update user
+app.use("/user", router); // get all user
+app.use("/user", router); // Create Users
+app.use("/user", router); // update user
+app.use("/user", router); // delete user
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
