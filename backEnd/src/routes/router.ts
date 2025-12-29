@@ -9,6 +9,6 @@ const router = Router();
 router.get("/", getUsers);
 router.post("/", createUser);
 router.put("/:id", updateUser);
-router.delete("/:id", deleteUser);
+router.delete("/:name", deleteUser);
 
 export default router;

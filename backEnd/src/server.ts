@@ -3,12 +3,20 @@ import dotenv from "dotenv";
 import dbConnection from "./config/db";
 import { Request, Response } from "express";
 import router from "./routes/router";
+import cors from "cors";
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+app.use(cors());
+// app.use(express.json());
+app.use((req, res, next) => {
+  if (req.method === "DELETE") {
+    return next(); // skip JSON parsing for DELETE
+  }
+  express.json()(req, res, next);
+});
 
-app.use(express.json());
 // this function is use to connect he dataBase
 dbConnection();
 

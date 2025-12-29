@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-this data is from teest branch 
-=======
 eakrjnfjkaerfhajbis
 
 
 the sample file 
-<<<<<<< HEAD
->>>>>>> frontEnd
 
 
-this data is from testBranch
-=======
-
-
-there are some changes in my front end
->>>>>>> frontEnd
+there are some changes in my front 
