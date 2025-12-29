@@ -1,7 +1,6 @@
 import React, { useEffect, useEffectEvent, useState } from "react";
 import "./CreateUser.css";
 import { postUsers } from "../services/Services";
-import Users from "./Users";
 
 const CreateUsers = ({ onUserAdded /*<-getData */ }) => {
   const [formData, setFormData] = useState({
