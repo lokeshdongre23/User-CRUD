@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A reusable Express + TypeScript starter template with a structured folder layout.\r This is starter folder have the dbconnection file where i used mongoose for connection with mongodb database.",
+  "main": "src/server.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/server",
+    "start": "nodemon src/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokeshdongre23/express-starter-folders.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lokeshdongre23/express-starter-folders/issues"
+  },
+  "homepage": "https://github.com/lokeshdongre23/express-starter-folders#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.6",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^25.0.3",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
