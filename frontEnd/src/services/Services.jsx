@@ -3,11 +3,11 @@ this iis use to get he daa from the back end
 */
 
 import axios from "axios";
+const URI = import.meta.env.VITE_BASE_URI;
 
 const connection = axios.create({
   // baseURL: "http://localhost:5000",
-  // baseURL: "http://65.0.188.13:5000",
-  baseURL: "https://65.0.188.13:5000",
+  baseURL: URI,
 });
 
 const getUsers = async () => {

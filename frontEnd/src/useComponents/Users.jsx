@@ -1,4 +1,4 @@
-import React, { useEffect, useEffectEvent, useState } from "react";
+import React, { useEffect, useState } from "react";
 import getUsers from "../services/Services";
 import UserCart from "../components/UserCart";
 import CreateUsers from "./CreateUsers";
@@ -11,12 +11,12 @@ function Users() {
     // console.log(res.Array);
     setUSers(res.data);
   };
-  const onSomething = useEffectEvent(() => {
-    getData();
-  });
+  // const onSomething = useEffectEvent(() => {
+  //   getData();
+  // });
   useEffect(() => {
-    onSomething();
-    // getData();
+    // onSomething();
+    getData();
   }, []);
   return (
     <>
