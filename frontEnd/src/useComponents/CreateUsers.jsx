@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useEffectEvent, useState } from "react";
 import "./CreateUser.css";
 import { postUsers } from "../services/Services";
+import Users from "./Users";
 
-const CreateUsers = ({ onSubmit }) => {
+const CreateUsers = ({ onUserAdded /*<-getData */ }) => {
   const [formData, setFormData] = useState({
     userName: "",
     designation: "",
@@ -21,9 +22,9 @@ const CreateUsers = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (onSubmit) {
-      onSubmit(formData);
-    }
+    // if (onSubmit) {
+    //   onSubmit(formData);
+    // }
     postUsers(formData);
     setFormData({
       userName: "",
@@ -34,6 +35,10 @@ const CreateUsers = ({ onSubmit }) => {
     });
     // console.log(formData);
     alert("hoho User Created");
+
+    if (onUserAdded) {
+      onUserAdded();
+    }
   };
 
   return (

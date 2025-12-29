@@ -7,7 +7,7 @@ function App() {
     <>
       {/* <Navbar /> */}
 
-      <CreateUsers />
+      {/* <CreateUsers /> */}
       <Users />
     </>
   );

@@ -1,11 +1,3 @@
-// import React from "react";
-
-// function UserCart({ userName, designation, email, cNo, address }) {
-//   return <div>UserCart</div>;
-// }
-
-// export default UserCart;
-
 import React from "react";
 import { deleteUSer } from "../services/Services";
 
